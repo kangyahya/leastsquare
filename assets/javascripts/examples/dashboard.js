@@ -20,8 +20,8 @@ $(function () {
 
   //AREA CHART EXAMPLE
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  var area = document.getElementById("area-chart");
-
+ 
+  var bar = document.getElementById("bar-chart");
   var options = {
     scales: {
       yAxes: [
@@ -33,69 +33,46 @@ $(function () {
       ],
     },
   };
-  var dataArea = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+
+  var dataBars = {
+    labels: ["2016", "2017", "2018", "2019"],
     datasets: [
-      {
-        label: "Golongan Darah A",
-        fill: true,
-        backgroundColor: "rgba(55, 209, 119, 0.45)",
-        borderColor: "rgba(55, 209, 119, 0.45)",
-        pointBorderColor: "rgba(75,192,192,1)",
-        pointBackgroundColor: "#fff",
-        pointHoverBackgroundColor: "343d3e",
-        pointHoverBorderColor: "rgba(220,220,220,1)",
-        data: [5, 13, 11, 6, 9, 12, 14],
-      },
-      {
-        label: "Golongan Darah B",
-        fill: true,
-        backgroundColor: "rgba(175, 175, 175, 0.26)",
-        borderColor: "rgba(175, 175, 175, 0.26)",
-        pointBorderColor: "rgba(75,192,192,1)",
-        pointBackgroundColor: "#fff",
-        pointHoverBackgroundColor: "#343d3e",
-        pointHoverBorderColor: "rgba(220,220,220,1)",
-        data: [14, 6, 9, 13, 12, 16, 5],
-      },
-      {
-        label: "Golongan Darah O",
-        fill: true,
-        backgroundColor: "rgba(175, 175, 175, 0.26)",
-        borderColor: "rgba(175, 175, 175, 0.26)",
-        pointBorderColor: "rgba(75,192,192,1)",
-        pointBackgroundColor: "#fff",
-        pointHoverBackgroundColor: "#343d3e",
-        pointHoverBorderColor: "rgba(220,220,220,1)",
-        data: [14, 6, 16, 9, 13, 12, 5],
-      },
-      {
-        label: "Golongan Darah AB",
-        fill: true,
-        backgroundColor: "rgba(175, 175, 175, 0.26)",
-        borderColor: "rgba(175, 175, 175, 0.26)",
-        pointBorderColor: "rgba(75,192,192,1)",
-        pointBackgroundColor: "#fff",
-        pointHoverBackgroundColor: "#343d3e",
-        pointHoverBorderColor: "rgba(220,220,220,1)",
-        data: [13, 12, 14, 6, 9, 16, 5],
-      },
+        {
+            label: "TI",
+            fill: true,
+            backgroundColor: "rgba(55, 209, 119, 0.45)",
+            borderColor: "rgba(55, 209, 119, 0.45)",
+            data: [91, 48, 93, 62]
+        },
+        {
+            label: "SIKA",
+            fill: true,
+            backgroundColor: "rgba(175, 175, 175, 0.26)",
+            borderColor: "rgba(175, 175, 175, 0.26)",
+            data: [142, 86, 63, 38],
+        },
+        {
+            label: "DKV",
+            fill: true,
+            backgroundColor: "rgba(20, 10, 100, 0.26)",
+            borderColor: "rgba(20, 10, 100, 0.26)",
+            data: [84, 100, 76, 24],
+        }
     ],
     options: {
-      scales: {
-        yAxes: [
-          {
-            stacked: true,
-          },
-        ],
-      },
-    },
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
   };
 
-  var areaChart = new Chart(area, {
-    type: "line",
-    data: dataArea,
-    options: options,
+  var barChar = new Chart(bar, {
+    type: 'bar',
+    data: dataBars,
+    options: options
+
   });
   //MAGNIFIC POPUP GALLERY
   // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
